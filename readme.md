@@ -1,21 +1,69 @@
-# Lumen PHP Framework
+# Agriculture API 
 
-[![Build Status](https://travis-ci.org/laravel/lumen-framework.svg)](https://travis-ci.org/laravel/lumen-framework)
-[![Total Downloads](https://poser.pugx.org/laravel/lumen-framework/d/total.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Stable Version](https://poser.pugx.org/laravel/lumen-framework/v/stable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![Latest Unstable Version](https://poser.pugx.org/laravel/lumen-framework/v/unstable.svg)](https://packagist.org/packages/laravel/lumen-framework)
-[![License](https://poser.pugx.org/laravel/lumen-framework/license.svg)](https://packagist.org/packages/laravel/lumen-framework)
 
-Laravel Lumen is a stunningly fast PHP micro-framework for building web applications with expressive, elegant syntax. We believe development must be an enjoyable, creative experience to be truly fulfilling. Lumen attempts to take the pain out of development by easing common tasks used in the majority of web projects, such as routing, database abstraction, queueing, and caching.
 
-## Official Documentation
+API helps you to insert Field, Tractor and then Generate the Reports
 
-Documentation for the framework can be found on the [Lumen website](http://lumen.laravel.com/docs).
+## Installation
 
-## Security Vulnerabilities
+Clone the branch to your local server path and then cd to the path you have copied
 
-If you discover a security vulnerability within Lumen, please send an e-mail to Taylor Otwell at taylor@laravel.com. All security vulnerabilities will be promptly addressed.
+Run the following command
 
-## License
+```
+    composer update
+```
 
-The Lumen framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT)
+```
+    cp .env.example .env
+```
+
+## Edit the .env file and add the following
+
+Database username
+Database password
+Database host
+
+Add Key for JWT
+Add Key for APP_KEY
+
+Then run the following command
+
+## Run migrate
+```
+    php artisan migrate
+```
+
+## Seed the Database
+```
+    php artisan db:seed
+```
+
+```
+    php -S localhost:8000 public/index.php
+
+```
+
+Now open your browser and open http://localhost:8000 you will see the landing page
+
+
+
+
+## This API use ACL 
+
+This API has some restriction like the registration is not public, so you have to login as 
+admin then only you can add users
+
+Admin User : admin@password.com
+
+Password : password
+
+## API Document
+
+Please open http://localhost:8000/api/documentation there you will get all the API details
+
+## DB Structure
+
+Please find "db.png"
+
+
